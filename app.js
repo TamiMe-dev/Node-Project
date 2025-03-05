@@ -4,7 +4,7 @@ const express = require("express")
 const cors = require("cors")
 const corsOptions = require("./config/corsOptions")
 const connectDB = require("./config/dbConn")
-// const { default: mongoose } = require("mongoose")
+const recipeRoutes=require("./routes/recipeRoutes")
 const PORT = process.env.PORT || 7001
 const app = express()
 connectDB()
@@ -12,6 +12,7 @@ connectDB()
 app.use(cors(corsOptions))
 app.use(express.json())
 app.use(express.static("public"))
+app.use('/',recipeRoutes)
 //routes
 app.get("/",(req,res)=>{
 res.send("this is the home page")
