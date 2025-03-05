@@ -6,4 +6,4 @@ router.post('/',addRecipe)
 router.get('/',getAllRecipes)
 router.delete('/:id', deleteRecipe);
 
-module.exports=router
+
