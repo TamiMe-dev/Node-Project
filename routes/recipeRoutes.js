@@ -5,6 +5,6 @@ const{addRecipe,getAllRecipes, deleteRecipe,getRecipeById}=require('../controlle
 router.post('/',addRecipe)
 router.get('/',getAllRecipes)
 router.delete('/:id', deleteRecipe);
-router.get('/:id',getRecipeById)
+
 
 module.exports=router
